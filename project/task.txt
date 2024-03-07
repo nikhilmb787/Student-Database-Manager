@@ -1,0 +1,122 @@
+Create a executable file named "student" from different modules like
+
+stud_add.c, stud_del.c, stud_show.c, stud_mod.c, stud_save.c,.....etc, when executed should display on the screen as in the figure 1.
+
+
+			--------------------------------------------------------------------------------------
+			|										      |	
+			|      *****STUDENT RECORD MENU*****				                      |					      				      |											    |	
+			|-------------------------------------------------------------------------------------|  	 							      |											    |	
+			|	a/A	: add new record						      |
+			|										      |
+			|	d/D 	: delete a record						      |
+			|										      |
+			|	s/ S	: show the list							      |	
+			|										      |
+			|	m/M 	: modify the record						      |
+			|										      |
+			|	v/V     : save								      |
+			|										      |
+			|	e/E	: exit								      |
+			|										      |
+			|	t/T	: sort the exit							      |
+			|										      |
+			|	l/L 	: delete all the records					      |
+                        |										      |
+			|	r/R	: reverse the list						      |
+			|										      |
+			|										      |	
+			|										      |		
+			---------------------------------------------------------------------------------------
+
+					fig.1
+
+
+
+stud_add.c:
+
+	   1) A function stud_add should be called each time the user inputs option 'a' from the menu.
+
+	   2) This function should create a new block dynamically to store the information of a student (rollno, name, percentage) and link it appropriately  into the singly linked list.
+
+	   3) When a new record is created the rollno should be automatically the least positive number without application.
+
+	   4) User has to input the name and percentage of the student.
+
+
+
+stud_del.c:
+
+	  1) A function stud_del, when called from the menu should prompt a sub-Menu(fig2) to delete a record "based on rolno", or "based on name".
+
+	  2) If identical names existing, then all the records with the same name should be displayed, so that user can identify the rollno to delete.
+
+
+stud_show.c:
+
+	  1) When called stud_show function should display the complete list in a tabular format.
+
+
+stud_mod.c:
+
+	  1) This should print a sub-menu(fig.3) to search which record is to be modified, options being with "rollno" or "name" or "percentage".
+
+	  2) If rollno is input first need to find the record availble or not, if available new entry should be prompted for input.
+
+	  3) If name or percentage is the input, as there is a possiblity of multiple existence, user should input the rollno which is associated with that (name/percentage) to modify.
+
+
+stud_save.c:
+
+	  1) The complete list should be saved into a file named "student.dat" when called from the menu.
+
+	  2) The "student.dat" is the database file which stores, all the students record, so each time this process runs has to get a updated list from the database file.
+
+	  3) If option "e" is chosen from menu, a sub menu (fig.4) should be displayed with choice for "save and exit" and "exit without saving".
+	
+	  4) When option is 't', it should print a sub-menu (fig.5) with choices "sort with name", "sort with percentage".
+
+	  5) Choosing 'l' from the menu should delete all the nodes from the list.
+
+	  6) When option 'r' is selected the list should be reversed.
+
+
+
+	-------------------------------------			------------------------------------------------------------------------------------------
+	| R/r	: enter roll to del	    |			|	Enter which record to search for modification 					 |
+	|				    |			|											 |
+	| N/n	: name to del		    |			|	R/r	: to search a rollno							 |
+	|				    |			|      											 |
+	|				    |			|       N/n	: to search a name							 |
+	|				    |			|											 |
+	-------------------------------------			|	P/p 	: percentage based							 |
+								|											 |
+		  fig.2						-----------------------------------------------------------------------------------------
+									
+		                                 							fig. 3
+
+
+	
+	--------------------------------------------
+	| Enter					   |				---------------------------------------------
+	|			  		   |				| Enter 				    |
+	| S/s	: save and exit			   |				|					    |
+	|					   |				| N/n	: sort with name		    |
+	| E/e 	: exit without saving		   |				| 					    |
+	|					   |				| P/p 	: sort with percentage		    |
+	|					   |				|					    |
+	--------------------------------------------				|					    |	
+										---------------------------------------------
+			fig.4					
+												fig.5
+
+
+
+
+
+
+
+
+
+
+
