@@ -10,7 +10,7 @@ void stud_modify(SLL **ptr, int rollno){
 		
 			printf("\nEnter the edited name : ");
 
-			scanf(" %[^\n]", del -> name);
+			scanf(" %s", del -> name);
 
 			printf("\nEnter the edited marks : ");
 
@@ -61,7 +61,7 @@ void stud_mod(SLL **ptr){
 
 		printf("\nEnter the name : ");
 
-		scanf(" %[^\n]", name);
+		scanf(" %s", name);
 
 		while(del){
 		
