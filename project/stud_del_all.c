@@ -4,7 +4,7 @@ void stud_del_all(SLL **ptr){
 
 	if(*ptr == 0){
 	
-		printf("\nNo records found\n");
+		printf("\033[31;1m\nNo records found\n\033[0m");
 
 		return;	
 	}
@@ -14,8 +14,6 @@ void stud_del_all(SLL **ptr){
 	while(del){
 	
 		*ptr = del -> next;
-
-		success("Node deleted");
 
 		free(del);
 

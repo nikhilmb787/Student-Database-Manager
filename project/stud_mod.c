@@ -4,30 +4,35 @@ void stud_modify(SLL **ptr, int rollno){
 
 	SLL *del = *ptr;
 
+	int flag = 0;
+
 	while(del != 0){
 		
 		if(del -> rollno == rollno){
 		
-			printf("\nEnter the edited name : ");
+			printf("\n\033[32;1mEnter the edited name : \033[0m");
 
 			scanf(" %s", del -> name);
 
-			printf("\nEnter the edited marks : ");
+			printf("\n\033[32;1mEnter the edited marks : \033[0m");
 
 			scanf(" %f", &del -> marks);
 
 			system("clear");
 
-			success("Data updated succesfully :)");
+			success("Data updated succesfully \xF0\x9F\x92\xAF");
 
-			return;
-		
+			flag = 1;
+
+			break;		
 		}
 
-		del - del -> next;	
+		del = del -> next;	
 	}
 
-	printf("\nNo records found\n");
+	if(flag == 0)
+
+		printf("\033[31;1m\nNo records found with this rollno  \U0001F641\033[0m\n");
 }
 
 void stud_mod(SLL **ptr){
@@ -40,15 +45,15 @@ void stud_mod(SLL **ptr){
 
 	SLL *del = *ptr, *dup = *ptr;
 
-	printf("\nEnter which record to search for modification \n\n\033[32;1mR/r     : to search a rollno\n\nN/n     : to search a name \n\nP/p     : percentage based \n\033[0m");
+	printf("\033[1m\nEnter which record to search for modification \033\n\n\033[32;1mR/r     : to search a rollno\n\nN/n     : to search a name \n\nP/p     : percentage based \n\033[0m");
 
-	printf("\nEnter the choice : ");
+	printf("\n\033[34mEnter the choice : \033[0m");
 		
 	scanf(" %c", &c);
 
 	if(c == 'R' || c == 'r'){
 
-		printf("\nEnter the rollno : ");
+		printf("\033[34m\nEnter the rollno : \033[0m");
 
 		scanf(" %d", &rollno);
 	
@@ -59,7 +64,7 @@ void stud_mod(SLL **ptr){
 
 		int count = 0;
 
-		printf("\nEnter the name : ");
+		printf("\n\033[34mEnter the name : \033[0m");
 
 		scanf(" %s", name);
 
@@ -98,7 +103,9 @@ void stud_mod(SLL **ptr){
 			stud_modify(ptr, temprollno);				
 		}
 
-		else if (count == 0)  printf("\nNo records found with this name\n");
+		else if (count == 0) 
+
+			printf("\033[31;1m\nNo records found with this name  \U0001F641\033[0m\n");
 
 	}
 
@@ -143,6 +150,12 @@ void stud_mod(SLL **ptr){
 
                         stud_modify(ptr, temprollno);
                 }
+
+		else if(count == 0)
+
+			printf("\033[31;1m\nNo records found with this percentage \U0001F641\033[0m\n");
+
+			
 
            }
 

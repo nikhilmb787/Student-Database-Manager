@@ -89,13 +89,13 @@ int main(){
 
                                 stud_save(headptr);
 
-				success("Saved and successfully exited :) :) ;) ");
+				success("Saved and successfully exited \xF0\x9F\x98\x8A ");
 
 			    }
 				
 			    else if(op == 'n' || op == 'N'){
 			
-           		    	success("Successfully exited :)");
+           		    	success("Successfully exited \xF0\x9F\x98\x8A");
 
 			    }
 

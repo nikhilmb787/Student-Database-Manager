@@ -17,7 +17,7 @@ void success(const char *message) {
 
         fflush(stdout);
 
-        usleep(200000);
+        usleep(100000);
 
         printf("\b");
 

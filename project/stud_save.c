@@ -21,5 +21,5 @@ void stud_save(SLL *ptr){
 
 	fclose(fp);
 
-	success("Successfully saved");
+	success("Successfully saved \xF0\x9F\x8C\x9F");
 }

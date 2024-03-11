@@ -67,7 +67,6 @@ void stud_sort(SLL *ptr){
 			
 				}
 
-				success("Sorting completed");
 
 			}
 
@@ -96,6 +95,8 @@ void stud_sort(SLL *ptr){
                                         p2 -> marks = t.marks;		
 
 				}	
+
+
 			}
 			
 			else{
@@ -113,5 +114,5 @@ void stud_sort(SLL *ptr){
 			
 	}
 
-	 success("Sorting completed");
+	 success("Sorting completed \xF0\x9F\x98\x8A");
 }
