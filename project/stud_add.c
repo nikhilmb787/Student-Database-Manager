@@ -1,10 +1,10 @@
 #include "student.h"
 
-void stud_add(SLL **ptr){
+void stud_add(SLL **ptr) {
 
     SLL *new = malloc(sizeof(SLL));
 
-    if(new == 0) {
+    if(new == 0){
 
         printf("\033[31mMemory allocation failed\n\033[0m");
 
@@ -13,43 +13,50 @@ void stud_add(SLL **ptr){
 
     printf("\033[33;1mEnter name: \033[0m");
 
-    scanf(" %[^\n]", new -> name);
+    scanf(" %s", new->name);
 
     printf("\n\033[33;1mEnter mark: \033[0m");
 
     scanf(" %f", &new->marks);
 
-    new -> next = NULL;
-    
-    int roll_no= 0;
+    new -> next = 0;
+
+    int roll_no = 1;
 
     SLL *temp = *ptr;
 
+    SLL *prev = 0;
+
     while(temp != 0) {
 
-        if(temp -> rollno > roll_no) {
+        if(temp -> rollno != roll_no){
+	
+		break;	
+	}
 
-            roll_no = temp -> rollno;
-        }
+	roll_no++;
 
-        temp = temp -> next;
+	prev = temp;
+
+	temp = temp -> next;
+
     }
-    
-    new->rollno = roll_no + 1;
 
-    if(*ptr == 0)
+    new -> rollno = roll_no;
+
+    if(prev == 0){
+
+        new -> next = *ptr;
 
         *ptr = new;
 
+    } 
+    
     else{
 
-        SLL *last = *ptr;
+        new -> next = prev -> next;
 
-        while(last->next)
-
-            last = last->next;
-
-        last->next = new;
+        prev -> next = new;
     }
 }
 
