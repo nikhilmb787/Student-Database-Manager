@@ -20,7 +20,7 @@ void stud_modify(SLL **ptr, int rollno){
 
 			system("clear");
 
-			success("Data updated succesfully \xF0\x9F\x92\xAF");
+			success("Data updated succesfully \xF0\x9F\x98\x84");
 
 			flag = 1;
 
